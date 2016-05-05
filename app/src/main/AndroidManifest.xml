@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="edu.feicui.com.splash"
+          android:versionCode="1"
+          android:versionName="1.0"
+    >
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.androide.phone" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+
+        android:label="通讯大全"
+        android:theme="@android:style/Theme.Light.NoTitleBar">
+        <uses-library android:name="android.test.runner" />
+        <activity
+            android:name=".logoActivity"
+            android:label="通讯大全">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".TelmsgActivity"
+            android:label="通讯大全"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".TellistActivity"
+                  android:label="@string/app_name"
+                  android:launchMode="singleTop"
+                  android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>
